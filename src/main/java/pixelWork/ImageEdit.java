@@ -32,6 +32,8 @@ public class ImageEdit
     String fileName;
     public ImageEdit()
     {
+
+
         f=new MyFrame("Графический редактор");
         f.setSize(350,350);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -164,6 +166,7 @@ public class ImageEdit
         JToolBar toolbar = new  JToolBar("Toolbar", JToolBar.VERTICAL);
 
         JButton penbutton = new  JButton(new  ImageIcon("pen.png"));
+        penbutton.setToolTipText("Ручка");
         penbutton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
@@ -173,6 +176,7 @@ public class ImageEdit
         });
         toolbar.add(penbutton);
         JButton brushbutton = new  JButton(new  ImageIcon("brush.png"));
+        brushbutton.setToolTipText("Кисть");
         brushbutton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
@@ -183,6 +187,7 @@ public class ImageEdit
         toolbar.add(brushbutton);
 
         JButton lasticbutton = new JButton(new  ImageIcon("lastic.png"));
+        lasticbutton.setToolTipText("Ластик");
         lasticbutton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
@@ -193,6 +198,7 @@ public class ImageEdit
         toolbar.add(lasticbutton);
 
         JButton textbutton = new  JButton(new  ImageIcon("text.png"));
+        textbutton.setToolTipText("Текст");
         textbutton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
@@ -203,6 +209,7 @@ public class ImageEdit
         toolbar.add(textbutton);
 
         JButton linebutton = new  JButton(new  ImageIcon("line.png"));
+        linebutton.setToolTipText("Линия");
         linebutton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
@@ -213,6 +220,7 @@ public class ImageEdit
         toolbar.add(linebutton);
 
         JButton elipsbutton = new  JButton(new  ImageIcon("elips.png"));
+        elipsbutton.setToolTipText("Элипс");
         elipsbutton.addActionListener(new  ActionListener(){
             public void actionPerformed(ActionEvent event)
             {
@@ -222,6 +230,7 @@ public class ImageEdit
         toolbar.add(elipsbutton);
 
         JButton rectbutton = new  JButton(new  ImageIcon("rect.png"));
+        rectbutton.setToolTipText("Прямоугольник");
         rectbutton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
@@ -235,8 +244,8 @@ public class ImageEdit
         f.add(toolbar);
 
         // Тулбар для кнопок
-        JToolBar colorbar = new  JToolBar("Colorbar", JToolBar.HORIZONTAL);
-        colorbar.setBounds(30, 0, 260, 30);
+        JToolBar colorBar = new  JToolBar("Colorbar", JToolBar.HORIZONTAL);
+        colorBar.setBounds(30, 0, 260, 30);
         colorbutton = new  JButton();
         colorbutton.setBackground(maincolor);
         colorbutton.setBounds(15, 5, 20, 20);
@@ -248,12 +257,12 @@ public class ImageEdit
                 coldi.setVisible(true);
             }
         });
-        colorbar.add(colorbutton);
+        colorBar.add(colorbutton);
 
-        JButton redbutton = new  JButton();
-        redbutton.setBackground(Color.red);
-        redbutton.setBounds(40, 5, 15, 15);
-        redbutton.addActionListener(new  ActionListener()
+        JButton redButton = new  JButton();
+        redButton.setBackground(Color.red);
+        redButton.setBounds(40, 5, 15, 15);
+        redButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -261,12 +270,12 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(redbutton);
+        colorBar.add(redButton);
 
-        JButton orangebutton = new  JButton();
-        orangebutton.setBackground(Color.orange);
-        orangebutton.setBounds(60, 5, 15, 15);
-        orangebutton.addActionListener(new  ActionListener()
+        JButton orangeButton = new  JButton();
+        orangeButton.setBackground(Color.orange);
+        orangeButton.setBounds(60, 5, 15, 15);
+        orangeButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -274,12 +283,12 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(orangebutton);
+        colorBar.add(orangeButton);
 
-        JButton yellowbutton = new  JButton();
-        yellowbutton.setBackground(Color.yellow);
-        yellowbutton.setBounds(80, 5, 15, 15);
-        yellowbutton.addActionListener(new  ActionListener()
+        JButton yellowButton = new  JButton();
+        yellowButton.setBackground(Color.yellow);
+        yellowButton.setBounds(80, 5, 15, 15);
+        yellowButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -287,12 +296,12 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(yellowbutton);
+        colorBar.add(yellowButton);
 
-        JButton greenbutton = new  JButton();
-        greenbutton.setBackground(Color.green);
-        greenbutton.setBounds(100, 5, 15, 15);
-        greenbutton.addActionListener(new  ActionListener()
+        JButton greenButton = new  JButton();
+        greenButton.setBackground(Color.green);
+        greenButton.setBounds(100, 5, 15, 15);
+        greenButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -300,12 +309,12 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(greenbutton);
+        colorBar.add(greenButton);
 
-        JButton bluebutton = new JButton();
-        bluebutton.setBackground(Color.blue);
-        bluebutton.setBounds(120, 5, 15, 15);
-        bluebutton.addActionListener(new  ActionListener()
+        JButton blueButton = new JButton();
+        blueButton.setBackground(Color.blue);
+        blueButton.setBounds(120, 5, 15, 15);
+        blueButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -313,12 +322,12 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(bluebutton);
+        colorBar.add(blueButton);
 
-        JButton cyanbutton = new  JButton();
-        cyanbutton.setBackground(Color.cyan);
-        cyanbutton.setBounds(140, 5, 15, 15);
-        cyanbutton.addActionListener(new  ActionListener()
+        JButton cyanButton = new  JButton();
+        cyanButton.setBackground(Color.cyan);
+        cyanButton.setBounds(140, 5, 15, 15);
+        cyanButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -326,12 +335,12 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(cyanbutton);
+        colorBar.add(cyanButton);
 
-        JButton magentabutton = new  JButton();
-        magentabutton.setBackground(Color.magenta);
-        magentabutton.setBounds(160, 5, 15, 15);
-        magentabutton.addActionListener(new  ActionListener()
+        JButton magentaButton = new  JButton();
+        magentaButton.setBackground(Color.magenta);
+        magentaButton.setBounds(160, 5, 15, 15);
+        magentaButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -339,12 +348,12 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(magentabutton);
+        colorBar.add(magentaButton);
 
-        JButton whitebutton = new  JButton();
-        whitebutton.setBackground(Color.white);
-        whitebutton.setBounds(180, 5, 15, 15);
-        whitebutton.addActionListener(new  ActionListener()
+        JButton whiteButton = new  JButton();
+        whiteButton.setBackground(Color.white);
+        whiteButton.setBounds(180, 5, 15, 15);
+        whiteButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -352,12 +361,12 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(whitebutton);
+        colorBar.add(whiteButton);
 
-        JButton blackbutton = new  JButton();
-        blackbutton.setBackground(Color.black);
-        blackbutton.setBounds(200, 5, 15, 15);
-        blackbutton.addActionListener(new  ActionListener()
+        JButton blackButton = new  JButton();
+        blackButton.setBackground(Color.black);
+        blackButton.setBounds(200, 5, 15, 15);
+        blackButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
@@ -365,9 +374,9 @@ public class ImageEdit
                 colorbutton.setBackground(maincolor);
             }
         });
-        colorbar.add(blackbutton);
-        colorbar.setLayout(null);
-        f.add(colorbar);
+        colorBar.add(blackButton);
+        colorBar.setLayout(null);
+        f.add(colorBar);
 
         tcc = new  JColorChooser(maincolor);
         tcc.getSelectionModel().addChangeListener(new  ChangeListener()

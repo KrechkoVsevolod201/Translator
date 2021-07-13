@@ -15,8 +15,10 @@ public class Picture {
                 //Reading the image
                 File file= new File("images\\Billy_Herrington.jpg");
                 BufferedImage img = ImageIO.read(file);
-                int windth = 0;
+                int windth = img.getWidth();
+                int height = 0;
                 for (int y = 0; y < img.getHeight(); y++) {
+                    height++;
                     for (int x = 0; x < img.getWidth(); x++) {
                         //Retrieving contents of a pixel
                         int pixel = img.getRGB(x,y);
@@ -34,6 +36,17 @@ public class Picture {
                     }
                 }
                 writer.close();
+
+        try(FileWriter writerSize = new FileWriter("files\\size.txt", false))
+        {
+            // запись всей строки
+            writerSize.write(windth + " " +  height);
+            writerSize.flush();
+        }
+        catch(IOException ex){
+            System.out.println(ex.getMessage());
+        }
+
                 System.out.println("RGB values at each pixel are stored in the specified file");
     }
 
