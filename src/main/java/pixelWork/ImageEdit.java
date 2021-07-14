@@ -165,80 +165,80 @@ public class ImageEdit
 
         JToolBar toolbar = new  JToolBar("Toolbar", JToolBar.VERTICAL);
 
-        JButton penbutton = new  JButton(new  ImageIcon("pen.png"));
-        penbutton.setToolTipText("Ручка");
-        penbutton.addActionListener(new  ActionListener()
+        JButton penButton = new  JButton(new  ImageIcon("pen.png"));
+        penButton.setToolTipText("Ручка");
+        penButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
                 rezhim=0;
             }
         });
-        toolbar.add(penbutton);
-        JButton brushbutton = new  JButton(new  ImageIcon("brush.png"));
-        brushbutton.setToolTipText("Кисть");
-        brushbutton.addActionListener(new  ActionListener()
+        toolbar.add(penButton);
+        JButton brushButton = new  JButton(new  ImageIcon("brush.png"));
+        brushButton.setToolTipText("Кисть");
+        brushButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
                 rezhim=1;
             }
         });
-        toolbar.add(brushbutton);
+        toolbar.add(brushButton);
 
-        JButton lasticbutton = new JButton(new  ImageIcon("lastic.png"));
-        lasticbutton.setToolTipText("Ластик");
-        lasticbutton.addActionListener(new  ActionListener()
+        JButton lasticButton = new JButton(new  ImageIcon("lastic.png"));
+        lasticButton.setToolTipText("Ластик");
+        lasticButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
                 rezhim=2;
             }
         });
-        toolbar.add(lasticbutton);
+        toolbar.add(lasticButton);
 
-        JButton textbutton = new  JButton(new  ImageIcon("text.png"));
-        textbutton.setToolTipText("Текст");
-        textbutton.addActionListener(new  ActionListener()
+        JButton textButton = new  JButton(new  ImageIcon("text.png"));
+        textButton.setToolTipText("Текст");
+        textButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
                 rezhim=3;
             }
         });
-        toolbar.add(textbutton);
+        toolbar.add(textButton);
 
-        JButton linebutton = new  JButton(new  ImageIcon("line.png"));
-        linebutton.setToolTipText("Линия");
-        linebutton.addActionListener(new  ActionListener()
+        JButton lineButton = new  JButton(new  ImageIcon("line.png"));
+        lineButton.setToolTipText("Линия");
+        lineButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
                 rezhim=4;
             }
         });
-        toolbar.add(linebutton);
+        toolbar.add(lineButton);
 
-        JButton elipsbutton = new  JButton(new  ImageIcon("elips.png"));
-        elipsbutton.setToolTipText("Элипс");
-        elipsbutton.addActionListener(new  ActionListener(){
+        JButton elipsButton = new  JButton(new  ImageIcon("elips.png"));
+        elipsButton.setToolTipText("Элипс");
+        elipsButton.addActionListener(new  ActionListener(){
             public void actionPerformed(ActionEvent event)
             {
                 rezhim=5;
             }
         });
-        toolbar.add(elipsbutton);
+        toolbar.add(elipsButton);
 
-        JButton rectbutton = new  JButton(new  ImageIcon("rect.png"));
-        rectbutton.setToolTipText("Прямоугольник");
-        rectbutton.addActionListener(new  ActionListener()
+        JButton rectButton = new  JButton(new  ImageIcon("rect.png"));
+        rectButton.setToolTipText("Прямоугольник");
+        rectButton.addActionListener(new  ActionListener()
         {
             public void actionPerformed(ActionEvent event)
             {
                 rezhim=6;
             }
         });
-        toolbar.add(rectbutton);
+        toolbar.add(rectButton);
 
         toolbar.setBounds(0, 0, 30, 300);
         f.add(toolbar);

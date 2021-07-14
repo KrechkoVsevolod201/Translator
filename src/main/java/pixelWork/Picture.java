@@ -40,7 +40,7 @@ public class Picture {
         try(FileWriter writerSize = new FileWriter("files\\size.txt", false))
         {
             // запись всей строки
-            writerSize.write(windth + " " +  height);
+            writerSize.write(windth + "\n" +  height);
             writerSize.flush();
         }
         catch(IOException ex){
